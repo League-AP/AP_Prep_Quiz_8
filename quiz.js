@@ -4,7 +4,7 @@ choices: ["int nearestInt = (int) a;", "int nearestInt = (int) a + 0.5;", "int n
 correctAnswer: 1
 }, {
 question: "A box company sells boxes according to the following chart:<br><br>up to 10 boxes = $1.00 ea<br>10 to 25 boxes = $0.75 ea<br>over 25 boxes = $0.50 ea<br><br>An order of 14 boxes will cost (10 * $1.00) + (4 * $0.75) = $13.00, and an order of 28 boxes will cost (10 * $1.00) + (15 * $0.75) + (3 * $0.50) = $22.75<br><br>A method is written that takes in a parameter for the total number of boxes desired and returns the cost of the order. Which data set has the minimum set if inputs that would be required to adequately test this method?",
-choices: ["10, 25", "5, 15, 30", "5, 10, 15, 25, 30", "5, 10, 15, 25, 30", "5, 10, 15, 20, 25, 30"],
+choices: ["10, 25", "5, 15, 30", "5, 10, 15, 25, 30", "5, 10, 15, 25, 30, 35", "5, 10, 15, 20, 25, 30, 40"],
 correctAnswer: 2
 }, {
 question: "Assuming that array is filled with integers, what would be the result of the following code?<br><br>int total = array[0], i = 0;<br>while(i < array.length)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>&nbsp;&nbsp;&nbsp;&nbsp;total += array[i];<br>}<br>",
