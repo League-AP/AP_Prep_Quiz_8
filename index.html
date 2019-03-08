@@ -100,21 +100,40 @@ questions[qIndex].choices[4]="&nbsp;&nbsp;&nbsp;The number of data movements in 
 
     questions[qIndex].correctAnswers=B;
 
+// Q27    
+    
 qIndex=qIndex+1;
 questions[qIndex] = new Question();
 questions[qIndex].number=qIndex+1;
 questions[qIndex].type="SING_ANS";
-questions[qIndex].question="<code>public class Searcher<br>{<br>&nbsp;&nbsp;&nbsp;private int[] arr;<br>&nbsp;&nbsp;&nbsp;/** Constructor. Initializes arr with integers. */ <br>&nbsp;&nbsp;&nbsp;public Searcher()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp; /* implementation not shown */ }<br><br>&nbsp;&nbsp;&nbsp;/**Precondition: arr[first]...arr[last]sortedinascendingorder.<br>&nbsp;&nbsp;&nbsp; * Postcondition:Returnsindexofkeyinarr.Ifkeynotinarr,<br>&nbsp;&nbsp;&nbsp; * returns -1.<br>&nbsp;&nbsp;&nbsp;*/<br>&nbsp;&nbsp;&nbsp;public int search(int first, int last, int key) <br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;int mid;<br>&nbsp;&nbsp;&nbsp;while (first <= last)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;mid = (first + last) / 2;<br>&nbsp;&nbsp;&nbsp; if (arr[mid] == key)&nbsp;&nbsp;&nbsp;//found key, exit search<br>&nbsp;&nbsp;&nbsp;return mid;<br>&nbsp;&nbsp;&nbsp;else if (arr[mid] < key) &nbsp;&nbsp;&nbsp;//key to right of arr[mid]<br>&nbsp;&nbsp;&nbsp;first = mid + 1;<br>&nbsp;&nbsp;&nbsp;else>&nbsp;&nbsp;&nbsp;//key to left of arr[mid] <br>&nbsp;&nbsp;&nbsp;last = mid - 1;<br>&nbsp;&nbsp;&nbsp; return -1;&nbsp;&nbsp;&nbsp;//key not in list</code><br><br>Which assertion is true just before each execution of the while loop?";
+questions[qIndex].question="<code>public class Searcher<br>{<br>&nbsp;&nbsp;&nbsp;private int[] arr;<br>&nbsp;&nbsp;&nbsp;/** Constructor. Initializes arr with integers. */ <br>&nbsp;&nbsp;&nbsp;public Searcher()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp; /* implementation not shown */ <br>&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;/**Precondition: arr[first]...arr[last] sorted in ascending order.<br>&nbsp;&nbsp;&nbsp; * Postcondition: Returns index of key in arr. If key not in arr,<br>&nbsp;&nbsp;&nbsp; * returns -1.<br>&nbsp;&nbsp;&nbsp;*/<br>&nbsp;&nbsp;&nbsp;public int search(int first, int last, int key) <br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int mid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (first <= last)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid = (first + last) / 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arr[mid] == key)&nbsp;&nbsp;&nbsp;//found key, exit search<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return mid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (arr[mid] < key) &nbsp;&nbsp;&nbsp;//key to right of arr[mid]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first = mid + 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//key to left of arr[mid] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last = mid - 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1;&nbsp;&nbsp;&nbsp;//key not in list<br>&nbsp;&nbsp;&nbsp;}<br>}<br></code><br>Which assertion is true just before each execution of the while loop?<br>";
 
 
-questions[qIndex].choices[0]="&nbsp;&nbsp;&nbsp;";
-questions[qIndex].choices[1]="&nbsp;&nbsp;&nbsp;";
-questions[qIndex].choices[2]="&nbsp;&nbsp;&nbsp;";
-questions[qIndex].choices[3]="&nbsp;&nbsp;&nbsp;";
-questions[qIndex].choices[4]="&nbsp;&nbsp;&nbsp;";
+questions[qIndex].choices[0]="&nbsp;&nbsp;&nbsp; <code>arr[first]</code>&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp; <code>key</code> &nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp; <code>arr[last]</code> ";
+questions[qIndex].choices[1]="&nbsp;&nbsp;&nbsp; <code>arr[first]</code> &nbsp;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;&nbsp; <code>key</code> &nbsp;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;&nbsp; <code>arr[last]</code> ";
+questions[qIndex].choices[2]="&nbsp;&nbsp;&nbsp; <code>arr[first]</code> &nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp; <code>key</code> &nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp; <code>arr[last]</code>&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;<code>key</code> is not in <code>arr</code>";
+questions[qIndex].choices[3]="&nbsp;&nbsp;&nbsp; <code>arr[first]</code> &nbsp;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;&nbsp; <code>key</code> &nbsp;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;&nbsp; <code>arr[last]</code>&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;<code>key</code> is not in <code>arr</code>";
+questions[qIndex].choices[4]="&nbsp;&nbsp;&nbsp; <code>key</code> &nbsp;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;&nbsp; <code>arr[first]</code>&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;<code>key</code> &nbsp;&nbsp;&nbsp;&gt;=&nbsp;&nbsp;&nbsp; <code>arr[last]</code>&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;<code>key</code> is not in <code>arr</code>";
 
-    questions[qIndex].correctAnswers=A;
+    questions[qIndex].correctAnswers=D;
 
+
+// Q28    
+    
+qIndex=qIndex+1;
+questions[qIndex] = new Question();
+questions[qIndex].number=qIndex+1;
+questions[qIndex].type="SING_ANS";
+questions[qIndex].question="<code>public class Searcher<br>{<br>&nbsp;&nbsp;&nbsp;private int[] arr;<br>&nbsp;&nbsp;&nbsp;/** Constructor. Initializes arr with integers. */ <br>&nbsp;&nbsp;&nbsp;public Searcher()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp; /* implementation not shown */ <br>&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;/**Precondition: arr[first]...arr[last] sorted in ascending order.<br>&nbsp;&nbsp;&nbsp; * Postcondition: Returns index of key in arr. If key not in arr,<br>&nbsp;&nbsp;&nbsp; * returns -1.<br>&nbsp;&nbsp;&nbsp;*/<br>&nbsp;&nbsp;&nbsp;public int search(int first, int last, int key) <br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int mid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (first <= last)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid = (first + last) / 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arr[mid] == key)&nbsp;&nbsp;&nbsp;//found key, exit search<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return mid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (arr[mid] < key) &nbsp;&nbsp;&nbsp;//key to right of arr[mid]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first = mid + 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//key to left of arr[mid] <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last = mid - 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1;&nbsp;&nbsp;&nbsp;//key not in list<br>&nbsp;&nbsp;&nbsp;}<br>}<br></code><br>Consider the array a with values as shown:<br><br>4, 7, 19, 25, 36, 37, 50, 100, 101, 205, 220, 271, 306, 321<br><br>where 4 is <code>a[0]</code> and 321 is <code>a[13]</code>. Suppose that the search method is called with first = 0 and last = 13 to locate the key 205.<br>How many iterations of the while loop must be made in order to locate it?<br>";
+
+
+questions[qIndex].choices[0]="&nbsp;&nbsp;&nbsp;3";
+questions[qIndex].choices[1]="&nbsp;&nbsp;&nbsp;4";
+questions[qIndex].choices[2]="&nbsp;&nbsp;&nbsp;5";
+questions[qIndex].choices[3]="&nbsp;&nbsp;&nbsp;10";
+questions[qIndex].choices[4]="&nbsp;&nbsp;&nbsp;13";
+
+    questions[qIndex].correctAnswers=B;
 
 
 
